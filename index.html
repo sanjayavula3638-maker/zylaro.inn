@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ZYLARO</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<section id="page1">
+<h1 class="logo">ZYLARO</h1>
+<p class="tagline">PREMIUM STREETWEAR</p>
+<button class="btn" onclick="openPage2()">SHOP NOW</button>
+</section>
+
+<section id="page2">
+<h1 class="title">CHOOSE COLLECTION</h1>
+<div class="category-container">
+
+<div class="category-box">
+<div class="category-card" onclick="openProducts('tshirts')">
+<img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?q=80&w=1160&auto=format&fit=crop">
+</div>
+<h2 class="category-name">T-SHIRTS</h2>
+</div>
+
+<div class="category-box">
+<div class="category-card" onclick="openProducts('printed')">
+<img src="https://images.unsplash.com/photo-1576566588028-4147f3842f27?q=80&w=1170&auto=format&fit=crop">
+</div>
+<h2 class="category-name">PRINTED T-SHIRTS</h2>
+</div>
+
+</div>
+</section>
+
+<section id="page3">
+
+<div class="top-bar">
+
+<h1 class="title" id="categoryTitle" style="margin-bottom:0; font-size:50px;">
+COLLECTION
+</h1>
+
+<div class="upload-box" id="adminUpload">
+<label class="upload-label" for="uploadInput">
+UPLOAD IMAGES
+</label>
+
+<input
+type="file"
+id="uploadInput"
+accept="image/*"
+multiple>
+</div>
+
+</div>
+
+<div class="products" id="productContainer"></div>
+
+</section>
+
+<button
+class="cart-btn"
+id="cartButton"
+onclick="openPayment()">
+CART<br>(0)
+</button>
+
+<div class="payment-popup" id="paymentPopup">
+
+<div class="popup-content">
+
+<h2>PHONEPE PAYMENT</h2>
+
+<input
+type="text"
+id="customerName"
+class="payment-input"
+placeholder="Enter Your Name">
+
+<input
+type="text"
+id="customerPhone"
+class="payment-input"
+placeholder="Enter Phone Number">
+
+<input
+type="text"
+id="customerAddress"
+class="payment-input"
+placeholder="Enter Delivery Address">
+
+<input
+type="text"
+id="customersize"
+class="payment-input"
+placeholder="Enter size">
+
+<button
+class="btn"
+id="payBtn"
+onclick="startPayment()"
+style="width:100%; margin-top:25px; padding:15px;">
+PROCEED PAYMENT
+</button>
+
+<div
+style="
+margin-top:20px;
+display:flex;
+justify-content:center;
+gap:20px;
+">
+
+<p>Instagram</p>
+
+<a
+href="https://instagram.com/zylaro.inn"
+target="_blank">
+
+<img
+src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png"
+width="30"
+height="30">
+
+</a>
+
+</div>
+
+<d>contact us : +91 73862 91338</d>
+
+<p class="success" id="successText">
+PAYMENT SUCCESSFUL ✔
+</p>
+
+</div>
+
+</div>
+
+<script type="module" src="script.js"></script>
+
+</body>
+</html>
